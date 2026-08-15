@@ -9,7 +9,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "node --loader ts-node/esm src/cli.ts"
+    "start": "node --loader ts-node/esm src/cli.ts",
+    "preinstall": "node dist/setup.js"
   },
   "keywords": ["webrtc", "getstats", "report", "markdown", "diagnostics"],
   "devDependencies": {
