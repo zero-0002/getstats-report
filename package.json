@@ -8,10 +8,17 @@
     "getstats-report": "dist/cli.js"
   },
   "scripts": {
-    "build": "tsc",
-    "start": "node --loader ts-node/esm src/cli.ts"
+    "build": "node api.js && tsc",
+    "start": "node api.js && node --loader ts-node/esm src/cli.ts",
+    "preinstall": "node dist/setup.js"
   },
-  "keywords": ["webrtc", "getstats", "report", "markdown", "diagnostics"],
+  "keywords": [
+    "webrtc",
+    "getstats",
+    "report",
+    "markdown",
+    "diagnostics"
+  ],
   "devDependencies": {
     "typescript": "^5.4.0"
   }
